@@ -305,9 +305,10 @@
         }
     },
     "rules": {
-        "/wxTeam/": {
+        "(/wxTeam/|activityType=(10033)|showPartition|partitionTeam)": {
             "name": "M组队瓜分",
-            "env": "export jd_zdjr_activityId=\"%s\"\nexport jd_zdjr_activityUrl=\"%s\"\nexport jd_zdjr_type=\"%s\""
+            "env": "export M_WX_TEAM_URL=\"%s\"",
+            "resend": true
         },
         "/wxFansInterActionActivity/": {
             "name": "M粉丝互动",
@@ -317,13 +318,9 @@
             "name": "M等级生日礼包",
             "env": "export M_WX_LEVEL_BIRTH_URL=\"%s\""
         },
-        "(/wxCollectionActivity/|interact(saas)?/(index)?\\?activityType=(10024))": {
+        "(/wxCollectionActivity/|activityType=(10024))": {
             "name": "M加购有礼",
             "env": "export M_WX_ADD_CART_URL=\"%s\""
-        },
-        "(^(?=.*dVF7gQUVKyUcuSsVhuya5d2XD4F)(?=.*code).*$)": {
-            "name": "M邀请有礼JOY",
-            "env": "export invite_code=\"%s\""
         },
         "(wxCollectCard)": {
             "name": "M集卡有礼",
@@ -337,23 +334,23 @@
             "name": "微定制开卡",
             "env": "#微定制\nexport WDZactivityId=\"%s\""
         },
-        "(interact(saas)?/(index)?\\?activityType=(10006|10070))": {
+        "(activityType=(10006|10070))": {
             "name": "M邀请有礼INTERACT",
             "env": "export M_INTERACT_INVITE_URL=\"%s\""
         },
-        "(showDrawOne|/lzclient/|/wxDrawActivity/|^(?=.*gzsl-isv)(?=.*game).*$)": {
+        "(showTaskDraw|showDrawOne|/lzclient/|/wxDrawActivity/|^(?=.*gzsl-isv)(?=.*game).*$)": {
             "name": "M幸运抽奖",
             "env": "export M_WX_LUCK_DRAW_URL=\"%s\""
         },
-        "(interact(saas)?/(index)?\\?activityType=(10020|10021|10026|10031|10046|10063|10073|10080))": {
+        "(activityType=(10020|10021|10026|10031|10042|10046|10063|10073|10080))": {
             "name": "M幸运抽奖",
             "env": "export M_WX_LUCK_DRAW_URL=\"%s\""
         },
-        "(/completeInfoActivity/|interact(saas)?/(index)?\\?activityType=(10049))": {
+        "(/completeInfoActivity/|activityType=(10049))": {
             "name": "M完善有礼",
             "env": "export M_WX_COMPLETE_DRAW_URL=\"%s\""
         },
-        "/drawCenter/": {
+        "(/drawCenter/|activityType=(10054))": {
             "name": "M老虎机抽奖",
             "env": "export M_WX_CENTER_DRAW_URL=\"%s\""
         },
@@ -365,7 +362,7 @@
             "name": "M关注特效",
             "env": "export M_WX_SHOP_GIFT_URL=\"%s\""
         },
-        "(interact(saas)?/(index)?\\?activityType=(10058))": {
+        "(activityType=(10058))": {
             "name": "M无线关注",
             "env": "export M_WX_SHOP_GIFT_URL=\"%s\""
         },
@@ -377,11 +374,11 @@
             "name": "M每日领奖",
             "env": "export M_WX_DAILY_GIFT_URL=\"%s\""
         },
-        "(/showSign|/signActivity|interact(saas)?/(index)?\\?activityType=(10023|10040))": {
+        "(pages/SignIn|/showSign|/signActivity|activityType=(10002|10023|10040))": {
             "name": "M签到有礼",
             "env": "export M_WX_SHOP_SIGN_URL=\"%s\""
         },
-        "(/wxPointShopView/point)": {
+        "(/wxPointShopView/point|exchangeActDetail|activityType=(10079))": {
             "name": "M积分兑换",
             "env": "export M_WX_POINT_DRAW_URL=\"%s\""
         },
@@ -389,7 +386,7 @@
             "name": "M盖楼领奖",
             "env": "export M_WX_BUILD_DRAW_URL=\"%s\""
         },
-        "(/wxCartKoi/|interact(saas)?/(index)?\\?activityType=(10036))": {
+        "(/wxCartKoi/|activityType=(10036))": {
             "name": "M购物车锦鲤",
             "env": "export M_WX_CARTKOI_URL=\"%s\""
         },
@@ -401,25 +398,57 @@
             "name": "M读秒手速",
             "env": "export M_WX_SECOND_DRAW_URL=\"%s\""
         },
-        "(/wxShopFollowActivity/)": {
+        "(showFavoriteShop|/wxShopFollowActivity/)": {
             "name": "M关注抽奖",
             "env": "export M_WX_FOLLOW_DRAW_URL=\"%s\""
         },
-        "(interact(saas)?/(index)?\\?activityType=(10053|10069))": {
+        "(activityType=(10053|10069))": {
             "name": "M无线关注",
             "env": "export M_WX_FOLLOW_DRAW_URL=\"%s\""
         },
-        "/wxCollectCard/": {
-            "name": "M集卡有礼",
-            "env": "export M_WX_COLLECT_CARD_URL=\"%s\""
+        "(/wxShareActivity/|/shareGift/|activityType=(10043|10068))": {
+            "name": "M分享有礼",
+            "env": "export M_WX_SHARE_URL=\"%s\""
         },
-        "/wxShareActivity/": {
+        "(activityType=(10068))": {
             "name": "M分享有礼",
             "env": "export M_WX_SHARE_URL=\"%s\""
         },
         "/wxgame/activity/": {
             "name": "M打豆豆",
             "env": "export M_WX_DADOUDOU_URL=\"%s\""
+        },
+        "(/dingzhi/joinCommon/activity|lzdz1-isv.isvjcloud.com/m/unite/)": {
+            "name": "M通用开卡",
+            "env": "export M_WX_OPENCARD_M_URL=\"%s\""
+        },
+        "(showInviteJoin)": {
+            "name": "M邀请有礼",
+            "env": "export M_JINGGENG_INVITE_URL=\"%s\""
+        },
+        "(showCart)": {
+            "name": "M加购有礼",
+            "env": "export M_WX_ADD_CART_URL=\"%s\""
+        },
+        "(loadBlindBox)": {
+            "name": "M幸运抽奖",
+            "env": "export M_WX_LUCK_DRAW_URL=\"%s\""
+        },
+        "(showPerfectInformation)": {
+            "name": "M完善有礼",
+            "env": "export M_WX_COMPLETE_DRAW_URL=\"%s\""
+        },
+        "(plusGift|extraGift)": {
+            "name": "M加购有礼",
+            "env": "export M_WX_ADD_CART_URL=\"%s\""
+        },
+        "(pointDraw|luckyGrid|turntable)": {
+            "name": "M幸运抽奖",
+            "env": "export M_WX_LUCK_DRAW_URL=\"%s\""
+        },
+        "(activityType=(10082|10084|10086|10089|10091|10092|10095))": {
+            "name": "M无线游戏",
+            "env": "export M_WX_GAME_URL=\"%s\""
         }
     }
 }
