@@ -446,9 +446,14 @@
             "name": "M幸运抽奖",
             "env": "export M_WX_LUCK_DRAW_URL=\"%s\""
         },
-        "(activityType=(10082|10084|10086|10089|10091|10092|10095))": {
+        "(activityType=(10082|10084|10086|10089|10091|10092|10093|10094|10095))": {
             "name": "M无线游戏",
             "env": "export M_WX_GAME_URL=\"%s\""
+        },
+        "(activityType=(10044))": {
+            "name": "M投票抽奖",
+            "unknown": true,
+            "env": "export M_WX_VOTE_DRAW_URL=\"%s\""
         }
     }
 }
