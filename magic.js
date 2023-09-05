@@ -79,7 +79,7 @@ process.env.M_WX_OPEN_CARD_TYPES ? process.env.M_WX_OPEN_CARD_TYPES.split(/[@,&|
 let masterNum = parseInt(process.env.M_WX_LEADER_NUM || "9999");
 
 //调用draw api类型
-let drawApiTypes = ['10001', '10020', '10021', '10026', '10031', '10042', '10046', '10054', '10062', '10063', '10080', '10082', '10084',
+let drawApiTypes = ['10001', '10020', '10021', '10026', '10031', '10042','10044', '10046', '10054', '10062', '10063', '10080', '10082', '10084',
     '10086', '10089', '10091', '10092', '10093', '10094', '10095']
 process.env.M_WX_DRAW_API_TYPES ? process.env.M_WX_DRAW_API_TYPES.split(/[@,&|]/).forEach((item) => drawApiTypes.push(item)) : '';
 
