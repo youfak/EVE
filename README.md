@@ -12,6 +12,7 @@
 |-----|----------------|----------------------|--------------------|-----|---------------------------------|
 | 新增  | M投票抽奖          |  M_WX_VOTE_DRAW_URL   | 参考解析文件             |  | [寒寒づ♡ど](https://t.me/djun97) |
 | 新增  | M无线游戏          |  M_WX_GAME_URL   | 参考解析文件 |  | [寒寒づ♡ど](https://t.me/djun97) |
+| 新增  | M老虎机抽奖          | M_WX_CENTER_DRAW_URL   | 参考解析文件 |  | [iMeagic](https://t.me/iMeagic)|
 | BUG | 修复100系列活动      |     |                    |  | [iMeagic](https://t.me/iMeagic) |
 | 新增 | M活动检测,无豆和实物不通知 |   M_WX_CHECK_ACT_URL  |                    |  | [iMeagic](https://t.me/iMeagic) |
 #### 2023-08-30
