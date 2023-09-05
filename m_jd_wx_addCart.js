@@ -1,5 +1,5 @@
 let mode = __dirname.includes('magic')
-const {Env} = mode ? require('../magic') : require('./magic')
+const {Env,cheerio} = mode ? require('../magic') : require('./magic')
 const $ = new Env('M加购有礼');
 $.activityUrl = decodeURIComponent(process.argv.splice(2)?.[0] || process.env.M_WX_ADD_CART_URL)
 if (mode) {
