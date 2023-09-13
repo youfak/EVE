@@ -1,7 +1,6 @@
 # I AM EVE
 
-### 没有微信群，没有微信群，没有微信群！！！
-## 本库已启用权限验证，非授权用户无法使用！
+## 本库已启用权限验证，非群内用户无法使用！
 ### [频道](https://t.me/Wall_E_Channel)
 ### CREATED BY [iMeagic](https://t.me/iMeagic)
 
