@@ -11,7 +11,7 @@
 |-----|-----------------------|------------|--------------|-----|---------------------------------|
 | 新增  | 不限量填地址                | 详见脚本54-64行 | 默认随机模式       |   RANDOM  | [iMeagic](https://t.me/iMeagic) |
 | 新增  | 大牌只关注加购抽奖             |    M_WX_OPENCARD_OPEN        | 设置为off及可关闭开卡 | on  | [iMeagic](https://t.me/iMeagic) |
-| 新增  | isvObfuscator 403使用代理 |            |  | on  | [iMeagic](https://t.me/iMeagic) |
+| 新增  | isvObfuscator 403使用代理 |            |  |   | [iMeagic](https://t.me/iMeagic) |
 #### 2023-09-13
 
 | 类型 | 说明     | 变量   | 参数                 | 默认值 | 作者                              |
