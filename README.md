@@ -1,6 +1,6 @@
 # I AM EVE
 
-## 本库已启用权限验证，非群内用户无法使用！
+## 本库已启用权限验证，仅限群内用户或非代挂使用！
 ### [频道](https://t.me/Wall_E_Channel)
 ### CREATED BY [iMeagic](https://t.me/iMeagic)
 
